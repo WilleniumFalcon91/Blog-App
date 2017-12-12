@@ -5,12 +5,18 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
-import promise from 'redux-promise';
-
+import thunk from 'redux-thunk';
+import { rootReducer } from './reducers/index';
 // import reducers from './reducers';
 import PostsIndex from './components/posts_index';
 
-const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
+
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+
+export default function configureStore(initialState) {
+  const store = createStoreWithMiddleware(rootReducer, initialState);
+  return store;
+}
 
 ReactDOM.render(
     <div className="App">
@@ -19,7 +25,7 @@ ReactDOM.render(
             <h2>Blog App</h2>
         </div>
     
-        <Provider store={createStoreWithMiddleware}>
+        <Provider store={configureStore()}>
             <BrowserRouter>
                 <div>
                     <Route path='/' component={PostsIndex} />
