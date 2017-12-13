@@ -29,3 +29,14 @@ body {
   margin-right: 1%;
 }
 
+.submit {
+  margin-right: 1%;
+}
+
+.text-help {
+  color: red;
+}
+
+.has-danger {
+  border-color: red;
+}
