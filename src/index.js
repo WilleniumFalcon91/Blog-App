@@ -5,13 +5,12 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
-import thunk from 'redux-thunk';
+import promise from 'redux-promise';
 import { rootReducer } from './reducers/index';
 // import reducers from './reducers';
 import PostsIndex from './components/posts_index';
 
-
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 export default function configureStore(initialState) {
   const store = createStoreWithMiddleware(rootReducer, initialState);
@@ -31,7 +30,7 @@ ReactDOM.render(
                     <Route path='/' component={PostsIndex} />
                 </div>
             </BrowserRouter>
-        </Provider>,
+        </Provider>
     </div>, document.getElementById('root'));
    
 registerServiceWorker();
