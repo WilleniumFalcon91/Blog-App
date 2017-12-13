@@ -15,7 +15,7 @@ body {
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 6%;
   padding: 20px;
   color: white;
 }
@@ -23,3 +23,4 @@ body {
 .App-intro {
   font-size: large;
 }
+
