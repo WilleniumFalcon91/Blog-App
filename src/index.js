@@ -6,12 +6,14 @@ import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 import promise from 'redux-promise';
+import logger from 'redux-logger'
 import { rootReducer } from './reducers/index';
 // import reducers from './reducers';
 import PostsIndex from './components/posts_index';
 import PostsNew from './components/posts_new';
+import PostsShow from './components/post_show';
 
-const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
+const createStoreWithMiddleware = applyMiddleware(promise,logger)(createStore);
 
 export default function configureStore(initialState) {
   const store = createStoreWithMiddleware(rootReducer, initialState);
@@ -30,6 +32,7 @@ ReactDOM.render(
                 <div>
                     <Switch>
                         <Route path='/posts/new' component={PostsNew} />
+                        <Route path='/posts/:id' component={PostsShow} />
                         <Route path='/' component={PostsIndex} />
                     </Switch>
                 </div>

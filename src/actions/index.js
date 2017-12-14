@@ -25,10 +25,10 @@ export function createPost(values, callback) {
 }
 
 export function fetchPost(id) {
-    const request = axios.get(`${ROOT_URL}/posts/${id}${API_KEY}`);
-
-    return{
-        type: FETCH_POST,
+    const url = `${ROOT_URL}/posts/${id}${API_KEY}`;
+    const request = axios.get(url)
+    return {
+        type: 'FETCH_POST',
         payload: request
     }
 }
