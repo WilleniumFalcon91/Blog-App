@@ -23,6 +23,24 @@ class PostsNew extends Component {
         )
     }
 
+    renderField2(field) {
+        const { meta: { touched, error } } = field;
+        const className = `form-group ${touched && error ? 'has-error' : ''}`;
+        return (
+            <div className={className}>
+                <label>{field.label}</label>
+                <textarea
+                className='form-control post-content'
+                type="text"
+                {...field.input}
+                />
+                <div className="text-help">
+                    {touched ? error : ''}
+                </div>
+            </div>
+        )
+    }
+
     onSubmit(values) {
         this.props.createPost(values, () => {
             this.props.history.push('/');
@@ -47,7 +65,8 @@ class PostsNew extends Component {
                 <Field
                     label="Post Content:"
                     name="content"
-                    component={this.renderField}
+                    autofocus='autofocus'
+                    component={this.renderField2}
                 />
             <button type="submit" className="btn btn-primary submit">
                 Submit

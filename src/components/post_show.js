@@ -38,7 +38,7 @@ class PostsShow extends Component {
                 <h3 className='post-title'>{post.title}</h3>
                 <div className='post-container'>
                     <p className='post-body'>{post.content}</p>
-                    <button className='tags'>{post.categories}</button>
+                    <button className='tags z-index-3'>{post.categories}</button>
                 </div>
             </div>
         );

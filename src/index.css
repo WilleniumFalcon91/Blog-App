@@ -73,11 +73,14 @@ h3 {
 
 .tags {
   border: 1px solid cornflowerblue;
+
 }
 
 .post-body {
   font-family: 'Libre Baskerville', serif;
-  margin-bottom: 5%;
+  margin-bottom: 4%;
+  line-height: 300%;
+  
 }
 
 .form-body {
@@ -86,4 +89,12 @@ h3 {
 
 .post-title {
   font-family: 'Fjalla One', sans-serif;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: -1%;
 }
+
+textarea.form-control.post-content {
+  height: 200px;
+}
+
