@@ -4,9 +4,9 @@ body {
   font-family: sans-serif;
 }
 
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   /* animation: App-logo-spin infinite 20s linear; */
@@ -14,10 +14,11 @@ body {
 }
 
 .App-header {
-  background-color: #222;
+  background: linear-gradient(to bottom right, blue, green);
   height: 6%;
   padding: 20px;
   color: white;
+  text-align: center;
 }
 
 .App-intro {
@@ -25,8 +26,8 @@ body {
 }
 
 .text-right {
-  margin-top: 1%;
-  margin-right: 1%;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 .submit {
@@ -39,4 +40,19 @@ body {
 
 .has-danger {
   border-color: red;
+}
+
+h3 {
+  margin-left: 25px;
+}
+
+.post-list {
+  margin: 10px;
+}
+
+.blog-name {
+  font-weight: 550; 
+  font-size: 36px;
+  margin-left: -10px;
+  font-family: 'Marck Script', cursive;
 }
