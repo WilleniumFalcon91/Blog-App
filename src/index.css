@@ -34,6 +34,16 @@ body {
   margin-right: 1%;
 }
 
+.delete {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.home {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
 .text-help {
   color: red;
 }
@@ -55,4 +65,25 @@ h3 {
   font-size: 36px;
   margin-left: -10px;
   font-family: 'Marck Script', cursive;
+}
+
+.post-container {
+  margin: 5%;
+}
+
+.tags {
+  border: 1px solid cornflowerblue;
+}
+
+.post-body {
+  font-family: 'Libre Baskerville', serif;
+  margin-bottom: 5%;
+}
+
+.form-body {
+  margin: 5%;
+}
+
+.post-title {
+  font-family: 'Fjalla One', sans-serif;
 }
