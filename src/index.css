@@ -10,13 +10,18 @@ body {
 
 .App-logo {
   /* animation: App-logo-spin infinite 20s linear; */
-  height: 80px;
+  height: 85px;
+  margin-left: 20px;
+  margin-top: 7.5px;
+  /* transform: rotate(5deg); */
 }
 
 .App-header {
-  background: linear-gradient(to bottom right, blue, green);
+  background: linear-gradient(to bottom right, #f96302, orangered);
+  display: flex;
+  justify-content: center;
   height: 6%;
-  padding: 20px;
+  padding: 25px;
   color: white;
   text-align: center;
 }
@@ -62,7 +67,7 @@ h3 {
 
 .blog-name {
   font-weight: 550; 
-  font-size: 36px;
+  font-size: 62px;
   margin-left: -10px;
   font-family: 'Marck Script', cursive;
 }
@@ -80,7 +85,6 @@ h3 {
   font-family: 'Libre Baskerville', serif;
   margin-bottom: 4%;
   line-height: 300%;
-  
 }
 
 .form-body {
@@ -88,13 +92,27 @@ h3 {
 }
 
 .post-title {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Francois One', sans-serif;
   margin-top: 5%;
   margin-left: 5%;
-  margin-bottom: -1%;
+  padding-bottom: 2%;
+  width: 90%;
+  margin-bottom: -2%;
+  border-bottom: 1.3px solid black;
 }
 
 textarea.form-control.post-content {
   height: 200px;
 }
 
+.search-bar {
+  width: 50%;
+  margin-top: 10px;
+  margin-left: 25%;
+}
+
+.index-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
