@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchPosts } from '../actions';
+import SearchBar from '../components/search_posts';
 
 class PostsIndex extends Component {    
     componentDidMount() {
@@ -24,8 +25,11 @@ class PostsIndex extends Component {
     render() {
         return (
             <div>
-                <div className="text-right">
-                    <Link className="btn btn-primary" to="/posts/new">Add a post</Link>
+                <div className='index-nav'>
+                    <SearchBar/>
+                    <div className="text-right">
+                        <Link className="btn btn-primary" to="/posts/new">Add a post</Link>
+                    </div>
                 </div>
                 <h3>Posts</h3>
                 <ul className='list-group post-list'>

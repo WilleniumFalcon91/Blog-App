@@ -33,7 +33,7 @@ class PostsShow extends Component {
                     className="btn btn-danger pull-right delete"
                     onClick={this.onDeleteClick.bind(this)}
                 >
-                    Delete Post
+                 Delete Post
                 </button>
                 <h3 className='post-title'>{post.title}</h3>
                 <div className='post-container'>
