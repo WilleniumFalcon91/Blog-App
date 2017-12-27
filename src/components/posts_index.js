@@ -15,6 +15,7 @@ class PostsIndex extends Component {
             return (
                 <li className='list-group-item' key={post.id}>
                     <Link to={`/posts/${post.id}`}>
+                        <img className="post-img" src='https://static1.squarespace.com/static/54b811e1e4b0a17414b3036f/t/54bea6e8e4b0705272ba773c/1421780713767/blog-1.jpg?format=1500w' alt='post img' />
                         {post.title}
                     </Link>
                 </li>

@@ -92,6 +92,8 @@ h3 {
 }
 
 .post-title {
+  display: flex;
+  justify-content: space-between;
   font-family: 'Francois One', sans-serif;
   margin-top: 5%;
   margin-left: 5%;
@@ -116,3 +118,12 @@ textarea.form-control.post-content {
   flex-direction: row;
   justify-content: space-between;
 }
+
+.post-img {
+  height: 100px;
+  width: 100px;
+  margin-right: 5%;
+}
+
+
+

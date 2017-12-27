@@ -35,7 +35,10 @@ class PostsShow extends Component {
                 >
                  Delete Post
                 </button>
-                <h3 className='post-title'>{post.title}</h3>
+                <h3 className='post-title'>
+                    {post.title}
+                    <img className='post-img right' src='https://static1.squarespace.com/static/54b811e1e4b0a17414b3036f/t/54bea6e8e4b0705272ba773c/1421780713767/blog-1.jpg?format=1500w' />
+                </h3>
                 <div className='post-container'>
                     <p className='post-body'>{post.content}</p>
                     <button className='tags z-index-3'>{post.categories}</button>

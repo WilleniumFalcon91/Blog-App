@@ -22,6 +22,14 @@ class SearchBar extends Component {
         actions.searchPosts(this.state.searchTerm);
     }
 
+    handleKeyPress(event){
+        if (event.key === 'Enter') {
+            const { actions } = this.props;
+            actions.searchPosts(this.state.searchTerm);
+        }
+    }
+
+
     render () {
         return (
             <div className="search-bar">
@@ -32,6 +40,7 @@ class SearchBar extends Component {
                     placeholder="Search for..."
                     onChange={this.onInputChange.bind(this)}
                     value={this.state.searchTerm}
+                    onKeyPress={this.handleKeyPress.bind(this)}
                 />
                 <span className="input-group-btn">
                     <button 

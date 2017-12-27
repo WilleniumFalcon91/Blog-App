@@ -68,6 +68,10 @@ class PostsNew extends Component {
                     autofocus='autofocus'
                     component={this.renderField2}
                 />
+                {/* <form enctype="multipart/form-data" action="/upload/image" method="post">
+                    <input id="image-file" type="file" />
+                </form> */}
+                
             <button type="submit" className="btn btn-primary submit">
                 Submit
             </button>
